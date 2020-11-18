@@ -14,29 +14,23 @@
   </head>
   <body>
       <div class = "container-fluid" id = "container">
-        <div class = "row">
+        <div clasbs = "row">
             <div class = "main-container col d-flex flex-column align-items-center">
                 <h1>Library</h1>
-                <button id='newBtn'>Create book</button>                 
+                <button id='newBtn' class = "mb-5">Create book</button>                 
 
                 <div id='popUp' class = "d-none">
-                    <form id='form' action='/Script.js'>
-                        <span class="close">&times;</span>
-                        <ledgend>New Book</ledgend>
-                        <div id='textInput'> 
-                            <p><input type='text' id='title' name='title' placeholder='Title'></p>
-                            <p><input type='text' id='author' name='author' placeholder='Author'></p>
-                            <p><input type='text' id='pages' name='pages' placeholder='Pages'></p>
-                        </div>
-                        <div id='checkBox'>
-                            <p><label >Read: </label><input type='checkbox' id='read' name='read' value='yes'></p>
-                        </div>
-                        <button type='submit' form='form' id='addBtn'>Add</button>
-                    </form>
+                    <input type="text" id="title" placeholder="Title">
+                    <br>
+                    <input type="text" id="author" placeholder="Author">
+                    <br>
+                    <input type="number" id="pages" placeholder="Pages">
+                    <br>
+                    <button id='addBtn' class = "mb-5">Submit</button>                 
                 </div>
 
                 <div id = "book-table" class = "mt-3">
-
+                    
                 </div>
             </div>
         </div>

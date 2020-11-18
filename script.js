@@ -1,9 +1,5 @@
 const popUpForm = document.getElementById('popUp');
-const closePopUp = document.getElementsByTagName('span')[0];
 const newBookBtn = document.querySelector('#newBtn');
-
-closePopUp.addEventListener('click',
-() => popUpForm.classList.add('d-none'));
 
 newBookBtn.addEventListener('click',
 () => popUpForm.classList.remove('d-none'));
@@ -11,17 +7,32 @@ newBookBtn.addEventListener('click',
 const addBtn = document.querySelector('#addBtn');
 addBtn.addEventListener('click', addBookToLibrary);
 
-function Book(){
+let myLibrary = [];
 
-}
-
-function closeForm(){
-}
-
-function openForm(){
+class Book {
+    constructor(title, author, pages) {
+        this.title = document.getElementById("title").value;
+        this.author = document.getElementById("author").value;
+        this.pages = document.getElementById("pages").value;
+    }
 }
 
 function addBookToLibrary() {
- //might wanna close the form at the same time
+    let parent = document.querySelector('#book-table');
+    let newBook = new Book(); // use the input to create a book
+    let newPara = document.createElement('P');
+
+    //add book to list
+    newPara.textContent = "Title: " + newBook.title + " | Author:  " + newBook.author + " | Pages: " + newBook.pages;
+
+    parent.appendChild(newPara);
+
+    clearInputFields(); // clear input fields
+    popUpForm.classList.add('d-none'); //hide form
 }
 
+function clearInputFields() { // reset the input after pressing the button
+    document.getElementById("title").value = title.defaultValue;
+    document.getElementById("author").value = author.defaultValue;
+    document.getElementById("pages").value = pages.defaultValue;
+}
