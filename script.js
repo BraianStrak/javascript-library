@@ -7,8 +7,6 @@ newBookBtn.addEventListener('click',
 const addBtn = document.querySelector('#addBtn');
 addBtn.addEventListener('click', addBookToLibrary);
 
-let myLibrary = [];
-
 class Book {
     constructor(title, author, pages) {
         this.title = document.getElementById("title").value;
