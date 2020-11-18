@@ -8,7 +8,7 @@ const addBtn = document.querySelector('#addBtn');
 addBtn.addEventListener('click', addBookToLibrary);
 
 class Book {
-    constructor(title, author, pages) {
+    constructor() {
         this.title = document.getElementById("title").value;
         this.author = document.getElementById("author").value;
         this.pages = document.getElementById("pages").value;
